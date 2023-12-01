@@ -37,7 +37,7 @@ def post_request():
     print("post url: " + url)
     headers = {"Authorization": auth_token}
     data = {
-        "name": "Naveen Automation",
+        "name": "amar",
         "email": generate_random_email(),
         "gender": "male",
         "status": "active"
@@ -50,7 +50,7 @@ def post_request():
     print("user id ===>", user_id)
     assert response.status_code == 201
     assert "name" in json_data
-    assert json_data["name"] == "Naveen Automation"
+    assert json_data["name"] == "amar"
     print(".......POST/Create USER IS DONE.......")
     print(".......=====================.......")
     return user_id
@@ -62,7 +62,7 @@ def put_request(user_id):
     print("PUT url: " + url)
     headers = {"Authorization": auth_token}
     data = {
-        "name": "Naveen Automation Labs",
+        "name": "amar",
         "email": generate_random_email(),
         "gender": "male",
         "status": "inactive"
@@ -73,7 +73,7 @@ def put_request(user_id):
     json_str = json.dumps(json_data, indent=4)
     print("json PUT response body: ", json_str)
     assert json_data["id"] == user_id
-    assert json_data["name"] == "Naveen Automation Labs"
+    assert json_data["name"] == "amar"
     print(".......PUT/Update USER IS DONE.......")
     print(".......=====================.......")
 
